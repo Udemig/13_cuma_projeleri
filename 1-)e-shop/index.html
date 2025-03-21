@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Home Page</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- * Header -->
+    <header>
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="/" class="logo">
+          <h1>E-Shop</h1>
+        </a>
+
+        <!-- Navigation -->
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <!-- menu button -->
+        <button class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- close button -->
+        <button class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Icons -->
+        <div class="nav-icons">
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">3</span></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- * Main -->
+    <main>
+      <!-- * Hero  -->
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Welcome to E-Shop</h1>
+          <p>Discover our amazing collection of products</p>
+          <a href="/products.html" class="button">Shop Now</a>
+        </div>
+      </section>
+      <!-- * Announcements -->
+      <section class="announcements">
+        <!-- Wrapper -->
+        <div class="announcements-grid">
+          <!-- Card -->
+          <div class="announcements-card">
+            <i class="fa-solid fa-tag"></i>
+            <h3>50% Off</h3>
+            <p>Big discount on selected items!</p>
+          </div>
+          <!-- Card -->
+          <div class="announcements-card">
+            <i class="fa-solid fa-truck"></i>
+            <h3>Free Shipping</h3>
+            <p>On orders over $50</p>
+          </div>
+          <!-- Card -->
+          <div class="announcements-card">
+            <i class="fa-solid fa-gift"></i>
+            <h3>Special Offers</h3>
+            <p>Limited time deals!</p>
+          </div>
+          <!-- Card -->
+          <div class="announcements-card">
+            <i class="fa-solid fa-rotate-left"></i>
+            <h3>Easy Returns</h3>
+            <p>30-day return policy</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Popular Products -->
+      <section class="popular-products">
+        <h2>Popular Products</h2>
+
+        <div class="products-grid">
+          <!-- Product Card -->
+          <div class="product-card">
+            <img src="./images/sony-headpones.avif" alt="product-image" />
+            <h3>Sony WH-1000XM4</h3>
+            <p>$349.99</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+          <!-- Product Card -->
+          <div class="product-card">
+            <img src="./images/apple-watch-8.avif" alt="product-image" />
+            <h3>Apple Watch Series 8</h3>
+            <p>$399.99</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+          <!-- Product Card -->
+          <div class="product-card">
+            <img src="./images/playstation5.webp" alt="product-image" />
+            <h3>PlayStation 5</h3>
+            <p>$499.99</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+          <!-- Product Card -->
+          <div class="product-card">
+            <img src="./images/iphone15.webp" alt="product-image" />
+            <h3>iPhone 15 Pro</h3>
+            <p>$999.99</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- * Footer -->
+    <footer>
+      <!-- Content -->
+      <div class="footer-content">
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Modern and quality products e-commerce platform</p>
+          <p>We've been serving our customers since 2010.</p>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/products.html">Products</a>
+            </li>
+            <li>
+              <a href="/about.html">About Us</a>
+            </li>
+            <li>
+              <a href="/contact.html">Contact </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i> 123 Main St, City,
+              Country
+            </li>
+
+            <li><i class="fa-solid fa-phone"></i> +1 234 567 890</li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              info@eshop.com
+            </li>
+          </ul>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+
+          <!-- Links -->
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- Newsletter  -->
+          <div class="newsletter">
+            <h4>Subscribe to Newsletter</h4>
+
+            <form>
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>
+          &copy;2024 E-Shop. All rights reserved.Created By
+          <span>Yusuf YAMAN</span>
+        </p>
+
+        <div class="footer-bottom-links">
+          <a href="#"> Privacy Policy</a>
+          <a href="#"> Terms of Service</a>
+          <a href="#"> Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- * Js Bağlantı -->
+    <script src="./main.js"></script>
+  </body>
+</html>
