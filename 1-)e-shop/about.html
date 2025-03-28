@@ -4,6 +4,291 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce About Page</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * About Css -->
+    <link rel="stylesheet" href="./styles/about.css" />
+    <!-- * Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- * Header -->
+    <header>
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="/" class="logo">
+          <h1>E-Shop</h1>
+        </a>
+
+        <!-- Navigation -->
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <!-- menu button -->
+        <button class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- close button -->
+        <button class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Icons -->
+        <div class="nav-icons">
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">3</span></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main class="page">
+      <!-- *Hero -->
+      <section class="about">
+        <div class="hero-content">
+          <h1>About Us</h1>
+          <p>Providing the best quality service since 2010</p>
+        </div>
+      </section>
+
+      <!-- * Info -->
+      <section class="info">
+        <div class="container">
+          <div class="info-grid">
+            <!-- Text -->
+            <div class="info-content">
+              <h2>Who We Are?</h2>
+              <p>
+                As E-Shop, we have been offering our customers the best quality
+                products at the most affordable prices since 2010. Our mission
+                is to provide a seamless and reliable shopping experience.
+              </p>
+              <p>
+                Our vision is to become Turkey's most trusted and preferred
+                e-commerce platform. To achieve this, we continuously improve
+                ourselves, follow technological innovations, and prioritize
+                customer satisfaction.
+              </p>
+            </div>
+            <!-- Stats -->
+            <div class="info-stats">
+              <!-- Card -->
+              <div class="stat-card">
+                <i class="fa-solid fa-users"></i>
+                <h3>1M+</h3>
+                <p>Happy Customers</p>
+              </div>
+              <!-- Card -->
+              <div class="stat-card">
+                <i class="fa-solid fa-box"></i>
+                <h3>50K+</h3>
+                <p>Product Variety</p>
+              </div>
+              <!-- Card -->
+              <div class="stat-card">
+                <i class="fa-solid fa-truck"></i>
+                <h3>81</h3>
+                <p>Nationwide Delivery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Team -->
+      <section class="team">
+        <div class="container">
+          <h2>Our Team</h2>
+          <!-- Team grid -->
+          <div class="team-grid">
+            <!-- Team Card -->
+            <div class="team-card">
+              <img src="./images/person-1.jpg" alt="team-1" />
+              <h3>Ahmet Yılmaz</h3>
+              <p>CEO</p>
+            </div>
+            <!-- Team Card -->
+            <div class="team-card">
+              <img src="./images/person-2.jpg" alt="team-1" />
+              <h3>Ayşe Demir</h3>
+              <p>Sales Manager</p>
+            </div>
+            <!-- Team Card -->
+            <div class="team-card">
+              <img src="./images/person-3.jpg" alt="team-1" />
+              <h3>Mehmet Kaya</h3>
+              <p>Technical Director</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Testimonials -->
+      <section class="testimonials">
+        <div class="container">
+          <!-- Title -->
+          <h2>Customer Reviews</h2>
+
+          <!-- Testimonials Grid -->
+          <div class="testimonials-grid">
+            <!-- Cards -->
+            <div class="testimonials-card">
+              <!-- Content -->
+              <div class="testimonials-content">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                  "I had a great shopping experience. The products are high
+                  quality and the prices are reasonable."
+                </p>
+              </div>
+              <!-- Author -->
+              <div class="testimonials-author">
+                <img src="./images/person-4.jpg" alt="author" />
+                <div>
+                  <h4>Zeynep Şahin</h4>
+                  <p>Istanbul</p>
+                </div>
+              </div>
+            </div>
+            <!-- Cards -->
+            <div class="testimonials-card">
+              <!-- Content -->
+              <div class="testimonials-content">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                  "Fast shipping and very attentive customer service. I highly
+                  recommend it."
+                </p>
+              </div>
+              <!-- Author -->
+              <div class="testimonials-author">
+                <img src="./images/person-5.jpg" alt="author" />
+                <div>
+                  <h4>Can Yıldız</h4>
+                  <p>Ankara</p>
+                </div>
+              </div>
+            </div>
+            <!-- Cards -->
+            <div class="testimonials-card">
+              <!-- Content -->
+              <div class="testimonials-content">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>
+                  "The product variety and pricing strategy are very successful.
+                  Thanks, E-Shop!"
+                </p>
+              </div>
+              <!-- Author -->
+              <div class="testimonials-author">
+                <img src="./images/person-6.jpg" alt="author" />
+                <div>
+                  <h4>Elif Kaya</h4>
+                  <p>Izmir</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- * Footer -->
+    <footer>
+      <!-- Content -->
+      <div class="footer-content">
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Modern and quality products e-commerce platform</p>
+          <p>We've been serving our customers since 2010.</p>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/products.html">Products</a>
+            </li>
+            <li>
+              <a href="/about.html">About Us</a>
+            </li>
+            <li>
+              <a href="/contact.html">Contact </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i> 123 Main St, City,
+              Country
+            </li>
+
+            <li><i class="fa-solid fa-phone"></i> +1 234 567 890</li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              info@eshop.com
+            </li>
+          </ul>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+
+          <!-- Links -->
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- Newsletter  -->
+          <div class="newsletter">
+            <h4>Subscribe to Newsletter</h4>
+
+            <form>
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>
+          &copy;2024 E-Shop. All rights reserved.Created By
+          <span>Yusuf YAMAN</span>
+        </p>
+
+        <div class="footer-bottom-links">
+          <a href="#"> Privacy Policy</a>
+          <a href="#"> Terms of Service</a>
+          <a href="#"> Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- * Js Bağlantı -->
+    <script src="./main.js"></script>
+  </body>
 </html>

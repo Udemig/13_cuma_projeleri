@@ -4,6 +4,243 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce Contact Page</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * Contact Css -->
+    <link rel="stylesheet" href="./styles/contact.css" />
+
+    <!-- * Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- * Header -->
+    <header>
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="/" class="logo">
+          <h1>E-Shop</h1>
+        </a>
+
+        <!-- Navigation -->
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+
+        <!-- menu button -->
+        <button class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- close button -->
+        <button class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- Icons -->
+        <div class="nav-icons">
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#"
+            ><i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">3</span></a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <!-- * Contact Hero -->
+      <section class="about">
+        <div class="hero-content">
+          <h1>Contact</h1>
+          <p>Get in touch with us</p>
+        </div>
+      </section>
+
+      <!-- * Contact Info -->
+      <section class="contact-info">
+        <div class="container">
+          <!-- Grid -->
+          <div class="contact-grid">
+            <!-- Details -->
+            <div class="contact-details">
+              <h2>Contact Information</h2>
+              <!-- Info Item -->
+              <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Ataturk Street No:123 Kadikoy, Istanbul</p>
+                </div>
+              </div>
+              <!-- Info Item -->
+              <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>+90 555 123 4567</p>
+                </div>
+              </div>
+              <!-- Info Item -->
+              <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>info@eshop.com</p>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <div class="contact-form">
+              <h2>Contact Us</h2>
+              <form>
+                <!-- Form Group -->
+                <div class="form-group">
+                  <label>Your Name</label>
+                  <input type="text" />
+                </div>
+                <!-- Form Group -->
+                <div class="form-group">
+                  <label>Your Email</label>
+                  <input type="email" />
+                </div>
+                <!-- Form Group -->
+                <div class="form-group">
+                  <label>Subject</label>
+                  <input type="text" />
+                </div>
+                <!-- Form Group -->
+                <div class="form-group">
+                  <label>Your Message</label>
+                  <textarea rows="5"></textarea>
+                </div>
+
+                <button>Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- * Map -->
+      <section class="map-section">
+        <div class="container">
+          <h2>Location</h2>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d823.451433541226!2d28.973963143392556!3d41.025619004347284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2str!4v1743190870836!5m2!1str!2str"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- * Footer -->
+    <footer>
+      <!-- Content -->
+      <div class="footer-content">
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Modern and quality products e-commerce platform</p>
+          <p>We've been serving our customers since 2010.</p>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/products.html">Products</a>
+            </li>
+            <li>
+              <a href="/about.html">About Us</a>
+            </li>
+            <li>
+              <a href="/contact.html">Contact </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i> 123 Main St, City,
+              Country
+            </li>
+
+            <li><i class="fa-solid fa-phone"></i> +1 234 567 890</li>
+
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              info@eshop.com
+            </li>
+          </ul>
+        </div>
+        <!-- Footer Section -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+
+          <!-- Links -->
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- Newsletter  -->
+          <div class="newsletter">
+            <h4>Subscribe to Newsletter</h4>
+
+            <form>
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>
+          &copy;2024 E-Shop. All rights reserved.Created By
+          <span>Yusuf YAMAN</span>
+        </p>
+
+        <div class="footer-bottom-links">
+          <a href="#"> Privacy Policy</a>
+          <a href="#"> Terms of Service</a>
+          <a href="#"> Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- * Js Bağlantı -->
+    <script src="./main.js"></script>
+  </body>
 </html>
