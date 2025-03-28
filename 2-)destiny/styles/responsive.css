@@ -1,0 +1,28 @@
+@media (max-width: 800px) {
+  header nav {
+    display: none;
+  }
+  #menu-btn {
+    display: block;
+  }
+  .open-nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 75px;
+    right: 20px;
+    background-color: #323443;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .hero {
+    justify-content: center;
+  }
+  .hero-inner {
+    max-width: 400px;
+  }
+  .hero-inner .button {
+    justify-content: center !important;
+  }
+}
