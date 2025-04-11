@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb-Home Page</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- * Header -->
+    <header>
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="./images/airbnb-logo.png" alt="logo" />
+        <span>airbnb</span>
+      </a>
+
+      <!-- Navigation -->
+
+      <nav>
+        <li>
+          <a href="#">Evler</a>
+        </li>
+        <li>
+          <a href="#">Deneyimler</a>
+        </li>
+      </nav>
+
+      <!-- Right -->
+      <div class="right">
+        <a href="#">Evinizi Airbnb'ye taşıyın</a>
+
+        <!-- Global Button -->
+        <button class="btn">
+          <i class="fa-solid fa-globe"></i>
+        </button>
+
+        <!-- Button -->
+        <button class="btn">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- * Filter Section -->
+    <section class="filter-section">
+      <div class="filter-item">
+        <i class="fas fa-rocket"></i>
+        <span>Olağanüstü</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-star"></i>
+        <span>Efsaneler</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Satıcılar</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-water"></i>
+        <span>Muhteşem havuz</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-fire"></i>
+        <span>Popüler</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-tree"></i>
+        <span>Ağaç evler</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-caravan"></i>
+        <span>Kamp araçları</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-umbrella-beach"></i>
+        <span>Adalar</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-mountain"></i>
+        <span>Milli parklar</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-igloo"></i>
+        <span>Üçgen evler</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-snowflake"></i>
+        <span>Kuzey Kutbu</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-image"></i>
+        <span>Güzel manzaralar</span>
+      </div>
+      <div class="filter-item">
+        <i class="fas fa-drafting-compass"></i>
+        <span>Tasarım</span>
+      </div>
+      <div class="filter-button">
+        <i class="fas fa-sliders-h"></i>
+        <span>Filtreler</span>
+      </div>
+    </section>
+
+    <!-- * Card Section -->
+    <section class="cards-section">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=1" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Porto Delgado, Portekiz</h3>
+            <div class="rating">
+              <span class="stars">★ 4.93</span>
+            </div>
+          </div>
+          <p class="distance">5.493 kilometre uzakta</p>
+          <p class="dates">30 Oca - 4 Şub</p>
+          <p class="price"><strong>₺29.729</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=2" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Western Cape, Güney Afrika</h3>
+            <div class="rating">
+              <span class="stars">★ 4.92</span>
+            </div>
+          </div>
+          <p class="distance">8.229 kilometre uzakta</p>
+          <p class="dates">14 - 19 May</p>
+          <p class="price"><strong>₺25.618</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=3" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Sindh, Pakistan</h3>
+            <div class="rating">
+              <span class="stars">★ 4.94</span>
+            </div>
+          </div>
+          <p class="distance">7.482 kilometre uzakta</p>
+          <p class="dates">23 - 28 May</p>
+          <p class="price"><strong>₺19.182</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=4" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Stage, Danimarka</h3>
+            <div class="rating">
+              <span class="stars">★ 4.80</span>
+            </div>
+          </div>
+          <p class="distance">2.678 kilometre uzakta</p>
+          <p class="dates">100.027</p>
+          <p class="price"><strong>₺23.289</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=5" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Briland, Levec</h3>
+            <div class="rating">
+              <span class="stars">★ 5.0</span>
+            </div>
+          </div>
+          <p class="distance">2.907 kilometre uzakta</p>
+          <p class="dates">17 - 22 Nis</p>
+          <p class="price"><strong>₺100.027</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=6" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Gaular, Norveç</h3>
+            <div class="rating">
+              <span class="stars">★ 4.94</span>
+            </div>
+          </div>
+          <p class="distance">3.339 kilometre uzakta</p>
+          <p class="dates">17 - 22 Nis</p>
+          <p class="price"><strong>₺53.401</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=7" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Haringen, Hollanda</h3>
+            <div class="rating">
+              <span class="stars">★ 4.93</span>
+            </div>
+          </div>
+          <p class="distance">2.986 kilometre uzakta</p>
+          <p class="dates">29 Haz - 4 Tem</p>
+          <p class="price"><strong>₺83.567</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=8" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Ferdo, Norveç</h3>
+            <div class="rating">
+              <span class="stars">★ 4.89</span>
+            </div>
+          </div>
+          <p class="distance">3.406 kilometre uzakta</p>
+          <p class="dates">13 - 18 Nis</p>
+          <p class="price"><strong>₺70.413</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=9" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Joncherey, Fransa</h3>
+            <div class="rating">
+              <span class="stars">★ 4.87</span>
+            </div>
+          </div>
+          <p class="distance">2.723 kilometre uzakta</p>
+          <p class="dates">6 - 11 Tem</p>
+          <p class="price"><strong>₺64.008</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=10" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Terruren, Belçika</h3>
+            <div class="rating">
+              <span class="stars">★ 4.88</span>
+            </div>
+          </div>
+          <p class="distance">2.377 kilometre uzakta</p>
+          <p class="dates">6 - 11 Ara</p>
+          <p class="price"><strong>₺33.490</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=11" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Reasingen, Norveç</h3>
+            <div class="rating">
+              <span class="stars">★ 4.89</span>
+            </div>
+          </div>
+          <p class="distance">3.064 kilometre uzakta</p>
+          <p class="dates">4 - 9 May</p>
+          <p class="price"><strong>₺92.413</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=12" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Göppingen, Almanya</h3>
+            <div class="rating">
+              <span class="stars">★ 5.0</span>
+            </div>
+          </div>
+          <p class="distance">2.559 kilometre uzakta</p>
+          <p class="dates">22 - 27 Nis</p>
+          <p class="price"><strong>₺27.409</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 13 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=13" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Lisbon, Portekiz</h3>
+            <div class="rating">
+              <span class="stars">★ 4.95</span>
+            </div>
+          </div>
+          <p class="distance">5.123 kilometre uzakta</p>
+          <p class="dates">10 - 15 Haz</p>
+          <p class="price"><strong>₺45.789</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 14 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=14" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Oslo, Norveç</h3>
+            <div class="rating">
+              <span class="stars">★ 4.90</span>
+            </div>
+          </div>
+          <p class="distance">3.200 kilometre uzakta</p>
+          <p class="dates">1 - 6 Tem</p>
+          <p class="price"><strong>₺60.123</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 15 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=15" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Stockholm, İsveç</h3>
+            <div class="rating">
+              <span class="stars">★ 4.87</span>
+            </div>
+          </div>
+          <p class="distance">3.150 kilometre uzakta</p>
+          <p class="dates">20 - 25 Ağu</p>
+          <p class="price"><strong>₺55.321</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 16 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=16" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Amsterdam, Hollanda</h3>
+            <div class="rating">
+              <span class="stars">★ 4.91</span>
+            </div>
+          </div>
+          <p class="distance">2.800 kilometre uzakta</p>
+          <p class="dates">15 - 20 Eyl</p>
+          <p class="price"><strong>₺70.456</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 17 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=17" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Paris, Fransa</h3>
+            <div class="rating">
+              <span class="stars">★ 4.88</span>
+            </div>
+          </div>
+          <p class="distance">2.600 kilometre uzakta</p>
+          <p class="dates">5 - 10 Eki</p>
+          <p class="price"><strong>₺80.987</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 18 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=18" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Berlin, Almanya</h3>
+            <div class="rating">
+              <span class="stars">★ 4.85</span>
+            </div>
+          </div>
+          <p class="distance">2.500 kilometre uzakta</p>
+          <p class="dates">25 - 30 Kas</p>
+          <p class="price"><strong>₺45.123</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 19 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=19" alt="Yer resmi" />
+          <span class="favorite-label">Misafirlerin favorisi</span>
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Roma, İtalya</h3>
+            <div class="rating">
+              <span class="stars">★ 4.90</span>
+            </div>
+          </div>
+          <p class="distance">2.700 kilometre uzakta</p>
+          <p class="dates">1 - 6 Ara</p>
+          <p class="price"><strong>₺65.789</strong> / gece</p>
+        </div>
+      </div>
+
+      <!-- Card 20 -->
+      <div class="card">
+        <div class="card-image">
+          <img src="https://picsum.photos/300/200?random=20" alt="Yer resmi" />
+          <button class="favorite-btn"><i class="far fa-heart"></i></button>
+        </div>
+        <div class="card-content">
+          <div class="card-header">
+            <h3>Barcelona, İspanya</h3>
+            <div class="rating">
+              <span class="stars">★ 4.87</span>
+            </div>
+          </div>
+          <p class="distance">3.000 kilometre uzakta</p>
+          <p class="dates">10 - 15 Oca</p>
+          <p class="price"><strong>₺55.456</strong> / gece</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- * Footer -->
+    <footer>
+      <!-- Ideas -->
+      <section aria-label="ideas">
+        <h2>Gelecek kaçamaklarınız için fikirler</h2>
+
+        <nav>
+          <li><a href="#" aria-current="page"> Popüler</a></li>
+          <li><a href="#"> Sanat ve kültür</a></li>
+          <li><a href="#"> Açık hava</a></li>
+          <li><a href="#"> Dağlar</a></li>
+          <li><a href="#"> Sahil</a></li>
+          <li><a href="#"> Kategoriler</a></li>
+          <li><a href="#"> Yapılacak şeyler</a></li>
+        </nav>
+
+        <div>
+          <article>
+            <h3>Canmore</h3>
+            <p>Kiralık site içi konutlar</p>
+          </article>
+          <article>
+            <h3>Benalmádena</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Marbella</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Mijas</h3>
+            <p>Kiralık evler</p>
+          </article>
+          <article>
+            <h3>Prescott</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Scottsdale</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Tucson</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Jasper</h3>
+            <p>Kiralık kulübeler</p>
+          </article>
+          <article>
+            <h3>Mountain View</h3>
+            <p>Kiralık kulübeler</p>
+          </article>
+          <article>
+            <h3>Devonport</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Mallacota</h3>
+            <p>Evcil hayvan dostu kiralık yerler</p>
+          </article>
+          <article>
+            <h3>Ibiza</h3>
+            <p>Kiralık tatil yerleri</p>
+          </article>
+          <article>
+            <h3>Anaheim</h3>
+            <p>Aile dostu kiralık yerler</p>
+          </article>
+          <article>
+            <h3>Monterey</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Paso Robles</h3>
+            <p>Kiralık evler</p>
+          </article>
+          <article>
+            <h3>Santa Barbara</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Sonoma</h3>
+            <p>Evcil hayvan dostu kiralık yerler</p>
+          </article>
+        </div>
+
+        <button>
+          Daha fazlasını göster <i class="fa-solid fa-angle-down"></i>
+        </button>
+      </section>
+
+      <!-- Footer Link -->
+      <section aria-label="footer-links">
+        <!-- Links -->
+        <div class="links">
+          <h2>Destek</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Yardım Merkezi</a>
+            </li>
+            <li>
+              <a href="#">AirCover</a>
+            </li>
+            <li>
+              <a href="#">Ayrımcılık yapmama</a>
+            </li>
+            <li>
+              <a href="#">Engellilik desteği</a>
+            </li>
+            <li>
+              <a href="#">İptal seçenekleri</a>
+            </li>
+            <li>
+              <a href="#">Semtinizdeki sorunu bildirin</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="links">
+          <h2>Ev sahipliği</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Evinizi Airbnb'ye taşıyın</a>
+            </li>
+            <li>
+              <a href="#">Ev sahipleri için AirCover</a>
+            </li>
+            <li>
+              <a href="#">Ev sahipliği kaynakları</a>
+            </li>
+            <li>
+              <a href="#"> Topluluk forumu</a>
+            </li>
+            <li>
+              <a href="#">Sorumlu ev sahipliği</a>
+            </li>
+            <li>
+              <a href="#"> Ücretsiz bir ev sahipliği dersine katılın</a>
+            </li>
+            <li>
+              <a href="#"> Yardımcı ev sahibi bulun</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="links">
+          <h2>Airbnb</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Basın odası</a>
+            </li>
+            <li>
+              <a href="#">Yeni özellikler</a>
+            </li>
+            <li>
+              <a href="#">Kariyer</a>
+            </li>
+            <li>
+              <a href="#"> Yatırımcılar</a>
+            </li>
+            <li>
+              <a href="#">Airbnb.org acil konaklamaları</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer Bottom -->
+      <section aria-label="footer-bottom">
+        <!-- Left -->
+        <div class="left">
+          <p>&copy; 2025 Airbnb, Inc.</p>
+
+          <ul>
+            <li><a href="#"> Gizlilik</a></li>
+            <li><a href="#"> Şartlar</a></li>
+            <li><a href="#"> Site haritası</a></li>
+          </ul>
+        </div>
+
+        <!-- Right -->
+        <div class="right">
+          <div>
+            <i class="fa-solid fa-globe"></i>
+            <span>Türkçe (TR)</span>
+          </div>
+
+          <div>
+            <span>₺ TRY</span>
+          </div>
+
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

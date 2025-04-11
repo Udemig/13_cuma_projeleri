@@ -1,0 +1,80 @@
+@import "./mixin";
+header {
+  display: grid;
+  grid-template-areas: "logo nav right";
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  border-bottom: 1px solid $color-border;
+  gap: $space-sm;
+  padding: $space-md $space-lg;
+
+  @include laptop {
+    grid-template-areas:
+      "logo  logo right"
+      "nav nav nav";
+  }
+
+  // Logo
+  .logo {
+    grid-area: logo;
+    display: flex;
+    gap: $space-xs;
+    align-items: center;
+    img {
+      width: 32px;
+    }
+    span {
+      font-size: $font-md;
+      font-weight: 600;
+      color: $color-pink;
+      @include laptop {
+        display: none;
+      }
+    }
+  }
+
+  // Nav
+  nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    gap: $space-lg;
+
+    @include tablet {
+      display: none;
+    }
+
+    a {
+      color: $color-black;
+      font-weight: 500;
+    }
+  }
+
+  // Right
+  .right {
+    grid-area: right;
+    display: flex;
+    align-items: center;
+    gap: $space-sm;
+
+    a {
+      font-size: $font-sm;
+      color: $color-black;
+    }
+
+    .btn {
+      background: none;
+      cursor: pointer;
+      font-size: $font-md;
+      border: 1px solid $color-border;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: flex;
+      gap: $space-md;
+      transition: all 0.5s ease;
+      &:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
+      }
+    }
+  }
+}
