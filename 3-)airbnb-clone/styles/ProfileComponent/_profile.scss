@@ -1,0 +1,46 @@
+.profile {
+  padding: $space-lg $space-md;
+  display: flex;
+  align-items: center;
+  gap: $space-lg;
+  @include tablet {
+    justify-content: center;
+    text-align: center;
+  }
+
+  // Image
+  img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  // Content
+  &-info {
+    h2 {
+      font-size: $font-lg;
+      font-weight: 700;
+      margin-bottom: $space-sm;
+    }
+
+    p {
+      font-size: $font-md;
+      color: $color-light-gray;
+      margin-bottom: $space-xs;
+    }
+
+    button {
+      margin-top: $space-sm;
+      background-color: #fb385c;
+      padding: $space-sm $space-md;
+      color: $color-white;
+      font-weight: 600;
+      border-radius: $radius-md;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.745);
+      }
+    }
+  }
+}

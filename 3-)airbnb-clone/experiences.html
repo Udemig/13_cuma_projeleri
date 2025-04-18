@@ -6,6 +6,353 @@
     <title>Airbnb-Experiences Page</title>
     <!-- * Css Link -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- * Header -->
+    <header>
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="./images/airbnb-logo.png" alt="logo" />
+        <span>airbnb</span>
+      </a>
+
+      <!-- Navigation -->
+
+      <nav>
+        <li>
+          <a href="#">Evler</a>
+        </li>
+        <li>
+          <a href="/experiences.html">Deneyimler</a>
+        </li>
+      </nav>
+
+      <!-- Right -->
+      <div class="right">
+        <a href="#">Evinizi Airbnb'ye taşıyın</a>
+
+        <!-- Global Button -->
+        <button class="btn">
+          <i class="fa-solid fa-globe"></i>
+        </button>
+
+        <!-- Button -->
+        <a href="/profile.html" class="btn">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- * Hero -->
+    <section class="experience-hero">
+      <h1>Gerçek Misafir Deneyimleri</h1>
+      <p>
+        Gerçek insanların, gerçek hikayeleri... Airbnb ile unutulmaz anılara göz
+        at.
+      </p>
+    </section>
+
+    <!-- * Filter -->
+    <section class="experience-filter">
+      <button>Hepsi</button>
+      <button>Doğa</button>
+      <button>Macera</button>
+      <button>Kültür</button>
+      <button>Şehir</button>
+      <button>Aile</button>
+    </section>
+
+    <!-- * Story -->
+    <section class="experience-story">
+      <!-- Text -->
+      <div class="text">
+        <h2>Hayatımın En Unutulmaz Kaçamağı</h2>
+        <p>
+          Sırt çantasıyla yola çıktığım bir tatilde, göl kenarında Airbnb ile
+          tanıştım. Doğanın sesi, yıldızlar ve şiş kebap... Daha ne olsun!
+        </p>
+      </div>
+
+      <!-- Image -->
+      <div class="image">
+        <img src="https://picsum.photos/600/400?random=99" alt="story-image" />
+      </div>
+    </section>
+
+    <!-- * Reviews -->
+    <section class="experience-reviews">
+      <!-- Card -->
+      <div class="experience-reviews-card">
+        <!-- Image -->
+        <img src="https://i.pravatar.cc/150?img=3" alt="user-image" />
+        <!-- Content -->
+        <div class="content">
+          <h3>Metehan Kurt</h3>
+          <p class="location">Trabzon, Türkiye</p>
+          <p class="review">
+            Karadeniz yaylalarında geçirdiğim en huzurlu 2 gündü!
+          </p>
+          <p class="rating">★ 5.0</p>
+        </div>
+      </div>
+      <!-- Card -->
+      <div class="experience-reviews-card">
+        <!-- Image -->
+        <img src="https://i.pravatar.cc/150?img=9" alt="user-image" />
+        <!-- Content -->
+        <div class="content">
+          <h3>Valeria Gomez</h3>
+          <p class="location">Barselona, İspanya</p>
+          <p class="review">
+            Deniz sesiyle uyanmak gibisi yok! Balkon manzarası efsaneydi.
+          </p>
+          <p class="rating">★ 4.9</p>
+        </div>
+      </div>
+      <!-- Card -->
+      <div class="experience-reviews-card">
+        <!-- Image -->
+        <img src="https://i.pravatar.cc/150?img=5" alt="user-image" />
+        <!-- Content -->
+        <div class="content">
+          <h3>Ayşe Nur</h3>
+          <p class="location">Nevşehir, Türkiye</p>
+          <p class="review">
+            Kapadokya'da balon turu yaptık! Airbnb evimiz tam kaya otel gibiydi.
+          </p>
+          <p class="rating">★ 5.0</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- * Share -->
+    <section class="experience-share">
+      <h2>Kendi Deneyimini Paylaş</h2>
+      <p>
+        Sen de yaşadığın o unutulmaz anı başkalarıyla paylaş, ilham kaynağı ol.
+      </p>
+      <div>
+        <button>Paylaş</button>
+      </div>
+    </section>
+
+    <!-- * Footer -->
+    <footer>
+      <!-- Ideas -->
+      <section aria-label="ideas">
+        <h2>Gelecek kaçamaklarınız için fikirler</h2>
+
+        <nav>
+          <li><a href="#" aria-current="page"> Popüler</a></li>
+          <li><a href="#"> Sanat ve kültür</a></li>
+          <li><a href="#"> Açık hava</a></li>
+          <li><a href="#"> Dağlar</a></li>
+          <li><a href="#"> Sahil</a></li>
+          <li><a href="#"> Kategoriler</a></li>
+          <li><a href="#"> Yapılacak şeyler</a></li>
+        </nav>
+
+        <div>
+          <article>
+            <h3>Canmore</h3>
+            <p>Kiralık site içi konutlar</p>
+          </article>
+          <article>
+            <h3>Benalmádena</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Marbella</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Mijas</h3>
+            <p>Kiralık evler</p>
+          </article>
+          <article>
+            <h3>Prescott</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Scottsdale</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Tucson</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Jasper</h3>
+            <p>Kiralık kulübeler</p>
+          </article>
+          <article>
+            <h3>Mountain View</h3>
+            <p>Kiralık kulübeler</p>
+          </article>
+          <article>
+            <h3>Devonport</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Mallacota</h3>
+            <p>Evcil hayvan dostu kiralık yerler</p>
+          </article>
+          <article>
+            <h3>Ibiza</h3>
+            <p>Kiralık tatil yerleri</p>
+          </article>
+          <article>
+            <h3>Anaheim</h3>
+            <p>Aile dostu kiralık yerler</p>
+          </article>
+          <article>
+            <h3>Monterey</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Paso Robles</h3>
+            <p>Kiralık evler</p>
+          </article>
+          <article>
+            <h3>Santa Barbara</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Sonoma</h3>
+            <p>Evcil hayvan dostu kiralık yerler</p>
+          </article>
+        </div>
+
+        <button>
+          Daha fazlasını göster <i class="fa-solid fa-angle-down"></i>
+        </button>
+      </section>
+
+      <!-- Footer Link -->
+      <section aria-label="footer-links">
+        <!-- Links -->
+        <div class="links">
+          <h2>Destek</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Yardım Merkezi</a>
+            </li>
+            <li>
+              <a href="#">AirCover</a>
+            </li>
+            <li>
+              <a href="#">Ayrımcılık yapmama</a>
+            </li>
+            <li>
+              <a href="#">Engellilik desteği</a>
+            </li>
+            <li>
+              <a href="#">İptal seçenekleri</a>
+            </li>
+            <li>
+              <a href="#">Semtinizdeki sorunu bildirin</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="links">
+          <h2>Ev sahipliği</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Evinizi Airbnb'ye taşıyın</a>
+            </li>
+            <li>
+              <a href="#">Ev sahipleri için AirCover</a>
+            </li>
+            <li>
+              <a href="#">Ev sahipliği kaynakları</a>
+            </li>
+            <li>
+              <a href="#"> Topluluk forumu</a>
+            </li>
+            <li>
+              <a href="#">Sorumlu ev sahipliği</a>
+            </li>
+            <li>
+              <a href="#"> Ücretsiz bir ev sahipliği dersine katılın</a>
+            </li>
+            <li>
+              <a href="#"> Yardımcı ev sahibi bulun</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="links">
+          <h2>Airbnb</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Basın odası</a>
+            </li>
+            <li>
+              <a href="#">Yeni özellikler</a>
+            </li>
+            <li>
+              <a href="#">Kariyer</a>
+            </li>
+            <li>
+              <a href="#"> Yatırımcılar</a>
+            </li>
+            <li>
+              <a href="#">Airbnb.org acil konaklamaları</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer Bottom -->
+      <section aria-label="footer-bottom">
+        <!-- Left -->
+        <div class="left">
+          <p>&copy; 2025 Airbnb, Inc.</p>
+
+          <ul>
+            <li><a href="#"> Gizlilik</a></li>
+            <li><a href="#"> Şartlar</a></li>
+            <li><a href="#"> Site haritası</a></li>
+          </ul>
+        </div>
+
+        <!-- Right -->
+        <div class="right">
+          <div>
+            <i class="fa-solid fa-globe"></i>
+            <span>Türkçe (TR)</span>
+          </div>
+
+          <div>
+            <span>₺ TRY</span>
+          </div>
+
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>

@@ -1,0 +1,63 @@
+.rent-history {
+  margin-top: $space-xl;
+  padding: $space-lg $space-md;
+
+  h3 {
+    font-size: $font-lg;
+    font-weight: 600;
+    margin-bottom: $space-md;
+  }
+
+  // Wrapper
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $space-md;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    box-shadow: $shadow-sm;
+
+    img {
+      width: 150px;
+      height: 80px;
+      border-radius: $radius-md;
+    }
+
+    div {
+      flex: 1;
+      padding: $space-sm $space-lg;
+      h4 {
+        font-size: $font-md;
+      }
+
+      p {
+        font-size: $font-sm;
+        color: $color-light-gray;
+      }
+    }
+
+    .status {
+      font-size: $font-sm;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: $radius-full;
+
+      &.complated {
+        background-color: #e7f9f1;
+        color: #2e8b58;
+      }
+
+      &.cancelled {
+        background-color: #fbeaea;
+        color: #c8534a;
+      }
+    }
+  }
+}

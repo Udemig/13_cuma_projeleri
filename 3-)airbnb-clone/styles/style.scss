@@ -15,8 +15,11 @@
 @import "./HomeComponents/card-section";
 
 // Experience
+@import "./ExperienceComponents/experience";
 
 // Profile
+@import "./ProfileComponent/profile";
+@import "./ProfileComponent/rent-history";
 
 body {
   font-family: "Poppins", sans-serif;

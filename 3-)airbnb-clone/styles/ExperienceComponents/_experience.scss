@@ -1,0 +1,169 @@
+.experience {
+  // Hero
+  &-hero {
+    background-color: $color-light-pink;
+    padding: $space-xl $space-md $space-lg;
+    text-align: center;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: $space-sm;
+    }
+
+    p {
+      color: $color-light-gray;
+      font-size: $font-md;
+    }
+  }
+  // Filter
+  &-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    padding: $space-sm $space-lg;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      background-color: $color-white;
+      padding: 0.4rem 1.2rem;
+      border: 1px solid $color-border;
+      border-radius: $radius-full;
+      font-size: $font-sm;
+      cursor: pointer;
+      &:hover {
+        background-color: #f7f7f7;
+      }
+      @include mobile {
+        width: 100px;
+      }
+    }
+  }
+  // Story
+  &-story {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-lg;
+    padding: $space-lg $space-md;
+    align-items: center;
+
+    @include laptop {
+      flex-direction: column;
+    }
+
+    .text {
+      flex: 1;
+
+      @include laptop {
+        text-align: center;
+      }
+      h2 {
+        font-size: $font-lg;
+        font-weight: 600;
+        margin-bottom: $space-sm;
+      }
+
+      p {
+        font-size: $font-md;
+        line-height: 1.6;
+        color: $color-dark-gray;
+      }
+    }
+
+    .image {
+      flex: 1;
+
+      img {
+        width: 100%;
+        border-radius: $radius-md;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // Review
+  &-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: $space-lg;
+    padding: $space-lg $space-md;
+    &-card {
+      display: flex;
+      gap: $space-md;
+      border: 1px solid $color-border;
+      padding: $space-md;
+      box-shadow: $shadow-sm;
+      border-radius: $radius-md;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .content {
+        h3 {
+          font-size: $font-md;
+          font-weight: 600;
+        }
+
+        .location {
+          font-size: $font-sm;
+          color: $color-light-gray;
+        }
+
+        .review {
+          margin: $space-xs 0;
+          font-size: $font-md;
+        }
+
+        .rating {
+          color: $color-pink;
+          font-weight: bold;
+          font-size: $font-md;
+        }
+      }
+    }
+  }
+
+  // Share
+  &-share {
+    @extend .experience-hero;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    h2 {
+      font-size: $font-lg;
+    }
+
+    button {
+      background-color: #fb385c;
+      color: $color-white;
+      padding: $space-sm $space-lg;
+      border-radius: $radius-md;
+      font-weight: 600;
+      font-size: $font-md;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

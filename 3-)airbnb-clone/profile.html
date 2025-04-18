@@ -6,6 +6,317 @@
     <title>Airbnb-Profile Page</title>
     <!-- * Css Link -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <!-- * Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- * Header -->
+    <header>
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <img src="./images/airbnb-logo.png" alt="logo" />
+        <span>airbnb</span>
+      </a>
+
+      <!-- Navigation -->
+
+      <nav>
+        <li>
+          <a href="#">Evler</a>
+        </li>
+        <li>
+          <a href="/experiences.html">Deneyimler</a>
+        </li>
+      </nav>
+
+      <!-- Right -->
+      <div class="right">
+        <a href="#">Evinizi Airbnb'ye taşıyın</a>
+
+        <!-- Global Button -->
+        <button class="btn">
+          <i class="fa-solid fa-globe"></i>
+        </button>
+
+        <!-- Button -->
+        <a href="/profile.html" class="btn">
+          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-user"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- * Profile Info -->
+    <section class="profile">
+      <!-- Image -->
+      <img src="https://i.pravatar.cc/150?img=12" alt="profile-image" />
+      <!-- Info -->
+      <div class="profile-info">
+        <h2>Yusuf Yaman</h2>
+        <p>Email: yusuf@example.com</p>
+        <p>Telefon: +90 500 123 45 67</p>
+        <button>Profili Düzenle</button>
+      </div>
+    </section>
+
+    <!-- * Rent History -->
+    <section class="rent-history">
+      <h3>Geçmiş Kiralama İşlemleri</h3>
+
+      <div class="rent-history-wrapper">
+        <!-- * Card -->
+        <div class="rent-history-card">
+          <!-- Image -->
+          <img src="https://picsum.photos/100/100?random=40" alt="card-image" />
+          <!-- Content -->
+          <div class="content">
+            <h4>Roma, İtalya</h4>
+            <p>1 - 6 Aralık 2024</p>
+          </div>
+          <!-- Status -->
+          <span class="status complated">Tamamlandı</span>
+        </div>
+        <!-- * Card -->
+        <div class="rent-history-card">
+          <!-- Image -->
+          <img src="https://picsum.photos/100/100?random=55" alt="card-image" />
+          <!-- Content -->
+          <div class="content">
+            <h4>Kapadokya, Türkiye</h4>
+            <p>5 - 10 Temmuz 2024</p>
+          </div>
+          <!-- Status -->
+          <span class="status cancelled">İptal Edildi</span>
+        </div>
+        <!-- * Card -->
+        <div class="rent-history-card">
+          <!-- Image -->
+          <img src="https://picsum.photos/100/100?random=42" alt="card-image" />
+          <!-- Content -->
+          <div class="content">
+            <h4>Paris, Fransa</h4>
+            <p>10 - 15 Ekim 2023</p>
+          </div>
+          <!-- Status -->
+          <span class="status complated">Tamamlandı</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- * Footer -->
+    <footer>
+      <!-- Ideas -->
+      <section aria-label="ideas">
+        <h2>Gelecek kaçamaklarınız için fikirler</h2>
+
+        <nav>
+          <li><a href="#" aria-current="page"> Popüler</a></li>
+          <li><a href="#"> Sanat ve kültür</a></li>
+          <li><a href="#"> Açık hava</a></li>
+          <li><a href="#"> Dağlar</a></li>
+          <li><a href="#"> Sahil</a></li>
+          <li><a href="#"> Kategoriler</a></li>
+          <li><a href="#"> Yapılacak şeyler</a></li>
+        </nav>
+
+        <div>
+          <article>
+            <h3>Canmore</h3>
+            <p>Kiralık site içi konutlar</p>
+          </article>
+          <article>
+            <h3>Benalmádena</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Marbella</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Mijas</h3>
+            <p>Kiralık evler</p>
+          </article>
+          <article>
+            <h3>Prescott</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Scottsdale</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Tucson</h3>
+            <p>Kiralık daireler</p>
+          </article>
+          <article>
+            <h3>Jasper</h3>
+            <p>Kiralık kulübeler</p>
+          </article>
+          <article>
+            <h3>Mountain View</h3>
+            <p>Kiralık kulübeler</p>
+          </article>
+          <article>
+            <h3>Devonport</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Mallacota</h3>
+            <p>Evcil hayvan dostu kiralık yerler</p>
+          </article>
+          <article>
+            <h3>Ibiza</h3>
+            <p>Kiralık tatil yerleri</p>
+          </article>
+          <article>
+            <h3>Anaheim</h3>
+            <p>Aile dostu kiralık yerler</p>
+          </article>
+          <article>
+            <h3>Monterey</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Paso Robles</h3>
+            <p>Kiralık evler</p>
+          </article>
+          <article>
+            <h3>Santa Barbara</h3>
+            <p>Kiralık kır evleri</p>
+          </article>
+          <article>
+            <h3>Sonoma</h3>
+            <p>Evcil hayvan dostu kiralık yerler</p>
+          </article>
+        </div>
+
+        <button>
+          Daha fazlasını göster <i class="fa-solid fa-angle-down"></i>
+        </button>
+      </section>
+
+      <!-- Footer Link -->
+      <section aria-label="footer-links">
+        <!-- Links -->
+        <div class="links">
+          <h2>Destek</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Yardım Merkezi</a>
+            </li>
+            <li>
+              <a href="#">AirCover</a>
+            </li>
+            <li>
+              <a href="#">Ayrımcılık yapmama</a>
+            </li>
+            <li>
+              <a href="#">Engellilik desteği</a>
+            </li>
+            <li>
+              <a href="#">İptal seçenekleri</a>
+            </li>
+            <li>
+              <a href="#">Semtinizdeki sorunu bildirin</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="links">
+          <h2>Ev sahipliği</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Evinizi Airbnb'ye taşıyın</a>
+            </li>
+            <li>
+              <a href="#">Ev sahipleri için AirCover</a>
+            </li>
+            <li>
+              <a href="#">Ev sahipliği kaynakları</a>
+            </li>
+            <li>
+              <a href="#"> Topluluk forumu</a>
+            </li>
+            <li>
+              <a href="#">Sorumlu ev sahipliği</a>
+            </li>
+            <li>
+              <a href="#"> Ücretsiz bir ev sahipliği dersine katılın</a>
+            </li>
+            <li>
+              <a href="#"> Yardımcı ev sahibi bulun</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Links -->
+        <div class="links">
+          <h2>Airbnb</h2>
+
+          <ul>
+            <li>
+              <a href="#"> Basın odası</a>
+            </li>
+            <li>
+              <a href="#">Yeni özellikler</a>
+            </li>
+            <li>
+              <a href="#">Kariyer</a>
+            </li>
+            <li>
+              <a href="#"> Yatırımcılar</a>
+            </li>
+            <li>
+              <a href="#">Airbnb.org acil konaklamaları</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer Bottom -->
+      <section aria-label="footer-bottom">
+        <!-- Left -->
+        <div class="left">
+          <p>&copy; 2025 Airbnb, Inc.</p>
+
+          <ul>
+            <li><a href="#"> Gizlilik</a></li>
+            <li><a href="#"> Şartlar</a></li>
+            <li><a href="#"> Site haritası</a></li>
+          </ul>
+        </div>
+
+        <!-- Right -->
+        <div class="right">
+          <div>
+            <i class="fa-solid fa-globe"></i>
+            <span>Türkçe (TR)</span>
+          </div>
+
+          <div>
+            <span>₺ TRY</span>
+          </div>
+
+          <ul>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
