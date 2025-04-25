@@ -18,6 +18,9 @@
 @import "./base/mixin";
 @import "./components/header";
 @import "./components/left-aside";
+@import "./components/main";
+@import "./components/right-aside";
+@import "./components/modal";
 
 body {
   font-family: "Roboto", sans-serif;
@@ -31,10 +34,21 @@ a {
 main {
   display: grid;
   grid-template-columns: auto 5fr 0.5fr;
+  height: 85vh;
+  @include lg {
+    grid-template-columns: auto 5fr;
+  }
 
   .right-aside {
     @include lg {
       display: none;
     }
+  }
+}
+
+.hide {
+  .create span,
+  .left-aside-middle span {
+    display: none;
   }
 }

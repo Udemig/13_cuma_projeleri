@@ -4,12 +4,6 @@
   padding: 13px;
   gap: 25px;
 
-  span {
-    @include xl {
-      display: none;
-    }
-  }
-
   i {
     @include xl {
       font-size: 20px;
