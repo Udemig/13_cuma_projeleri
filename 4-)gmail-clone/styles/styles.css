@@ -370,4 +370,8 @@ main {
 .hide .create span,
 .hide .left-aside-middle span {
   display: none;
+}
+
+.bi-star-fill {
+  color: #ece852;
 }/*# sourceMappingURL=styles.css.map */
