@@ -1,6 +1,17 @@
 .results {
   display: flex;
   flex-direction: column;
+  .title {
+    padding: 10px;
+    font-size: 25px;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include laptop {
+      max-width: 500px;
+    }
+  }
   .result-link {
     background-color: white;
     cursor: pointer;
