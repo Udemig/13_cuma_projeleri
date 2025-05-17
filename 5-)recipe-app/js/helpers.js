@@ -48,4 +48,10 @@ const controlBtn = (basket) => {
   }
 };
 
-export { createIngredient, setToLocalStorage, getFromLocalStorage, controlBtn };
+export {
+  createIngredient,
+  setToLocalStorage,
+  getFromLocalStorage,
+  controlBtn,
+  isRecipeLiked,
+};

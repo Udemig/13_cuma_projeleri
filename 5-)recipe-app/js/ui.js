@@ -44,7 +44,7 @@ const renderRecipes = (recipe) => {
             <h1>${recipe.title}</h1>
 
             <div class="like-area">
-              <i class="bi bi-heart"></i>
+              <i id='like-btn' class="bi bi-heart"></i>
             </div>
           </figure>
 
@@ -96,7 +96,7 @@ const renderBasketItem = (items) => {
   // items dizisini dönerek basket elemanları için birer html oluştur
   const markup = items
     .map(
-      (item) => `       <li>
+      (item) => `       <li data-id=${item.id} >
               <i class="bi bi-x"></i>
               <span>${item.title}</span>
             </li>`

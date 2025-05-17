@@ -16,7 +16,7 @@ import {
 const api = new API();
 
 // Localstorage'dan sepet verilerini al ve bir basket dizisine aktar
-const basket = getFromLocalStorage("basket") || [];
+let basket = getFromLocalStorage("basket") || [];
 
 // * Form gönderildiğinde çalışacak fonksiyon
 const handleSubmit = (e) => {
@@ -40,11 +40,10 @@ const controlUrl = () => {
   // Url'i izle ve # ile geçilen  href attribute'üne eriş.Url'e geçilen bu href içerisindeki id'ye erişmek için # işaretini "" 'e çevir
   const id = window.location.hash.replace("#", "");
 
-  // loader'ı render et
-  renderLoader(uiElements.recipeArea);
-
   // Eğer id varsa api isteği at
   if (id) {
+    // loader'ı render et
+    renderLoader(uiElements.recipeArea);
     api.getRecipe(id).then(() => {
       renderRecipes(api.recipe);
     });
@@ -77,6 +76,50 @@ const handleClick = (e) => {
     });
   }
   // Like butonuna tıklandıysa
+  else if (e.target.id === "like-btn") {
+    toggleLike();
+  }
+};
+
+// Sepete eklenen ürünü kaldıran fonksiyon
+const deleteItem = (e) => {
+  // Eğer delete icon'a tıklandıysa
+  if (e.target.classList.contains("bi-x")) {
+    // Sil ikonunun kapsayıcısına eriş
+    const parentElement = e.target.parentElement;
+    // ParentEleman'daki id değerine eriş
+    const parentId = parentElement.dataset.id;
+    // Id'si bilinen elemanı sepetten kaldır
+    basket = basket.filter((i) => i.id != parentId);
+
+    // Basket'ın güncel halini localStorage'a gönder
+    setToLocalStorage("basket", basket);
+
+    // Silinen sepet elemanını arayüzden kaldır
+    parentElement.remove();
+
+    // Sepette eleman varmı kontrol et
+    controlBtn(basket);
+  }
+};
+
+// Sepeti temizleyen fonksiyon
+const clearBasket = () => {
+  // Kullanıcıdan onay al
+  const res = confirm("Bütün sepet silinecek!! Eminmisiniz ??");
+
+  // Eğer onay verilirse sepeti temizle
+  if (res) {
+    // localstorage'ı temizle
+    setToLocalStorage("basket", null);
+    // basket dizisi sıfırla
+    basket = [];
+    // Sepetin html'ini sıfırla
+    uiElements.basketList.innerHTML = "";
+
+    // Sepetteki ürün miktarına göre clearBtn'in görünürlüğünü ayarla
+    controlBtn(basket);
+  }
 };
 
 // Sayfanın yüklenme anı ve Url'deki değişimi izle
@@ -93,3 +136,9 @@ uiElements.form.addEventListener("submit", handleSubmit);
 
 // RecipeArea kısmındaki tıklanmaları izle
 uiElements.recipeArea.addEventListener("click", handleClick);
+
+// Sepet elemanlarına tıklanınca çalışacak fonksiyon
+uiElements.basketList.addEventListener("click", deleteItem);
+
+// Sepeti temizle butonuna tıklanınca sepeti temizleyecek fonksiyon
+uiElements.clearBtn.addEventListener("click", clearBasket);

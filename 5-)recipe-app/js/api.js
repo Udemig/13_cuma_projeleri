@@ -35,6 +35,8 @@ class API {
 
     // Data içerisindeki ingredients'ı Api classı içerisindeki ingredients dizisine aktar
     this.ingredients = data.recipe.ingredients;
+
+    //
   }
 }
 
