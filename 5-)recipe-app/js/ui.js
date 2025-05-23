@@ -1,4 +1,8 @@
-import { createIngredient } from "./helpers.js";
+import {
+  createIngredient,
+  getFromLocalStorage,
+  isRecipeLiked,
+} from "./helpers.js";
 
 // Arayüz elemanlarını tutan obje
 const uiElements = {
@@ -7,6 +11,7 @@ const uiElements = {
   recipeArea: document.querySelector(".recipe"),
   basketList: document.querySelector(".basket ul"),
   clearBtn: document.querySelector("#clear"),
+  likeList: document.querySelector(".likes-list"),
 };
 
 // Arama sonuçlarını render eden fonksiyon
@@ -34,6 +39,10 @@ const renderResults = (recipes) => {
 
 // Tarif bilgilerini render eden fonksiyon
 const renderRecipes = (recipe) => {
+  console.log(recipe);
+
+  const isLiked = isRecipeLiked(recipe.recipe_id);
+
   // Recipe kısmında render edilecek html'i oluştur
   const recipeMarkup = ` <figure>
             <img
@@ -44,7 +53,9 @@ const renderRecipes = (recipe) => {
             <h1>${recipe.title}</h1>
 
             <div class="like-area">
-              <i id='like-btn' class="bi bi-heart"></i>
+              <i id='like-btn' class="bi ${
+                isLiked ? "bi-heart-fill" : "bi-heart"
+              }  "></i>
             </div>
           </figure>
 
@@ -107,10 +118,32 @@ const renderBasketItem = (items) => {
   uiElements.basketList.innerHTML = markup;
 };
 
+// Likes elemanlarını render edecek fonksiyon
+const renderLikes = () => {
+  // Localstorage'dan likelanan tarif verilerini al
+  const likes = getFromLocalStorage("likes") || [];
+  // Likes dizisindeki her eleman için bir html oluştur
+  const likesHtml = likes
+    .map(
+      (item) => `      <a href="#">
+              <img
+                src="${item.image_url}"
+                width="50"
+                alt="list-image"
+              />
+              <p>${item.title}</p>
+            </a>`
+    )
+    .join("");
+  // Oluşturulan html'i arayüze ekle
+  uiElements.likeList.innerHTML = likesHtml;
+};
+
 export {
   uiElements,
   renderResults,
   renderRecipes,
   renderLoader,
   renderBasketItem,
+  renderLikes,
 };

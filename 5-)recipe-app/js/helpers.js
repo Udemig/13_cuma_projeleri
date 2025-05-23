@@ -48,10 +48,53 @@ const controlBtn = (basket) => {
   }
 };
 
+// Tarif like'landı mı ?
+const isRecipeLiked = (id) => {
+  // localStorage'dan likes key'ine sahip elemanları al
+  const likes = getFromLocalStorage("likes") || [];
+  // Tarif like'landı mı?
+  for (let i = 0; i < likes.length; i++) {
+    if (likes[i].id === id) return true;
+  }
+
+  return false;
+};
+
+// Bir tarifi likela
+const addLike = (recipe) => {
+  const likes = getFromLocalStorage("likes") || [];
+
+  likes.push({
+    id: recipe.recipe_id,
+    title: recipe.title,
+    image_url: recipe.image_url,
+  });
+
+  setToLocalStorage("likes", likes);
+};
+
+// Bir elemandan like'ı kaldır
+
+const removeLike = (id) => {
+  // Likes dizisine eriş
+  const likes = getFromLocalStorage("likes") || [];
+  const newLikes = [];
+
+  for (let i = 0; i < likes.length; i++) {
+    if (likes[i].id !== id) {
+      newLikes.push(likes[i]);
+    }
+  }
+
+  setToLocalStorage("likes", newLikes);
+};
+
 export {
   createIngredient,
   setToLocalStorage,
   getFromLocalStorage,
   controlBtn,
   isRecipeLiked,
+  addLike,
+  removeLike,
 };

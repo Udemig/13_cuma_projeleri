@@ -30,8 +30,13 @@ main {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   height: 100vh !important;
-  @include tablet {
-    grid-template-columns: 1fr;
+
+  @include laptop {
+    grid-template-columns: 1fr !important;
+  }
+
+  @mixin mobile {
+    max-width: 500px;
   }
 }
 

@@ -394,9 +394,9 @@ main {
   grid-template-columns: 1fr 2fr 1fr;
   height: 100vh !important;
 }
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
   main {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 

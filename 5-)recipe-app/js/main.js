@@ -1,11 +1,15 @@
 import API from "./api.js";
 import {
+  addLike,
   controlBtn,
   getFromLocalStorage,
+  isRecipeLiked,
+  removeLike,
   setToLocalStorage,
 } from "./helpers.js";
 import {
   renderBasketItem,
+  renderLikes,
   renderLoader,
   renderRecipes,
   renderResults,
@@ -74,10 +78,40 @@ const handleClick = (e) => {
       // clearBtn'i render edecek fonksiyonu çalıştır
       controlBtn(basket);
     });
+
+    Toastify({
+      text: "Ürünler sepete eklendi",
+      duration: 3000,
+      destination: "https://github.com/apvarun/toastify-js",
+      newWindow: true,
+      close: true,
+      gravity: "top", // `top` or `bottom`
+      position: "right", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        borderRadius: "5px",
+      },
+      onClick: function () {}, // Callback after click
+    }).showToast();
   }
   // Like butonuna tıklandıysa
   else if (e.target.id === "like-btn") {
-    toggleLike();
+    // Like'lanacak elemanın id'sine eriş
+    const id = api.recipe.recipe_id;
+
+    // Tarif like'landı mı kontrol et
+    const isLiked = isRecipeLiked(id);
+
+    if (isLiked) {
+      removeLike(id);
+    } else {
+      addLike(api.recipe);
+    }
+
+    renderRecipes(api.recipe);
+
+    renderLikes();
   }
 };
 
@@ -129,6 +163,8 @@ const clearBasket = () => {
   renderBasketItem(basket);
   // clearBtn'i render edecek fonksiyonu çalıştır
   controlBtn(basket);
+
+  renderLikes();
 });
 
 // Arayüzdeki form'un gönderilmesini izle
