@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X-Clone Auth Sayfası</title>
+    <!-- * Css Link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body class="auth-page">
+    <!-- Form -->
+    <form id="login-form">
+      <!-- Logo -->
+      <img src="/images/x-logo .png" alt="x-logo" />
+
+      <!-- Name -->
+      <div class="name">
+        <label>Kullanıcı Adı:</label>
+        <input type="text" />
+        <div class="name-warning-wrapper">
+          <!-- <p class="name-warning">İsim kısımı boş bırakılamaz</p> -->
+        </div>
+      </div>
+      <!-- Password -->
+      <div class="password">
+        <label>Şifre:</label>
+        <input type="password" />
+        <div class="password-warning-wrapper">
+          <!-- <p class="password-warning">Şifre giriniz !</p> -->
+        </div>
+      </div>
+
+      <button type="submit" id="auth-btn">Giriş Yap</button>
+    </form>
+
+    <!-- * Js Connection -->
+    <script src="./js/auth.js" type="module"></script>
+  </body>
+</html>
