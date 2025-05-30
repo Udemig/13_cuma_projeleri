@@ -15,3 +15,9 @@
     @content;
   }
 }
+
+@mixin miniPhone {
+  @media (max-width: 700px) {
+    @content;
+  }
+}

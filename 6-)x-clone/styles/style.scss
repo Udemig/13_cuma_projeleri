@@ -17,6 +17,7 @@ body {
 }
 
 // Scss Imports
+@import "./mixin";
 @import "./auth";
 @import "./feed";
-@import "./mixin";
+@import "./userInfo";

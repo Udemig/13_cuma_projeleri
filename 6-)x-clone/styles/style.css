@@ -71,11 +71,16 @@ body {
   min-height: 100vh;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 600px 1fr;
 }
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .feed-page {
-    grid-template-columns: 1fr 3fr !important;
+    grid-template-columns: 1fr 600px !important;
+  }
+}
+@media (max-width: 700px) {
+  .feed-page {
+    grid-template-columns: 70px 1fr !important;
   }
 }
 .feed-page .left-aside {
@@ -155,6 +160,9 @@ body {
   align-items: end;
   align-items: center;
   gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 @media (max-width: 1300px) {
   .feed-page .left-aside .user-info {
@@ -166,29 +174,227 @@ body {
   height: 50px;
   border-radius: 50%;
 }
-.feed-page .left-aside .user-info div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.feed-page .left-aside .user-info div p {
+.feed-page .left-aside .user-info p {
   white-space: nowrap;
   font-size: 18px;
 }
 @media (max-width: 1000px) {
-  .feed-page .left-aside .user-info div p {
+  .feed-page .left-aside .user-info p {
     display: none;
   }
 }
-.feed-page .left-aside .user-info div button {
+.feed-page .left-aside .user-info button {
   background-color: gray;
   color: white;
   padding: 10px;
   border-radius: 5px;
   font-size: 20px;
 }
+.feed-page main {
+  border: 1px solid rgb(50, 50, 50);
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.feed-page main #title {
+  font-size: 20px;
+  padding: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid rgb(50, 50, 50);
+}
+.feed-page main form {
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+  border-bottom: 1px solid rgb(50, 50, 50);
+}
+.feed-page main form img {
+  width: 50px;
+  height: 50px;
+}
+.feed-page main form div {
+  width: 100%;
+}
+.feed-page main form div input {
+  width: 100%;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.feed-page main form div .btn-wrapper {
+  display: flex;
+  justify-content: end;
+}
+.feed-page main form div .btn-wrapper button {
+  background-color: #0e619b;
+  padding: 10px;
+  border-radius: 60px;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.feed-page main form div .btn-wrapper button:hover {
+  background-color: rgba(0, 98, 155, 0.608);
+}
+.feed-page main #tweets-area {
+  display: flex;
+  flex-direction: column;
+}
+.feed-page main #tweets-area .tweet {
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(50, 50, 50);
+}
+.feed-page main #tweets-area .tweet .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.feed-page main #tweets-area .tweet .user .tweet-user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.feed-page main #tweets-area .tweet .user .tweet-user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.feed-page main #tweets-area .tweet .user .tweet-user-info h4 {
+  font-size: 15px;
+  white-space: nowrap;
+}
+.feed-page main #tweets-area .tweet .user .tweet-user-info a {
+  color: gray;
+}
+.feed-page main #tweets-area .tweet .user .tweet-user-info #tweet-date {
+  white-space: nowrap;
+}
+.feed-page main #tweets-area .tweet .user i {
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.feed-page main #tweets-area .tweet .user i:hover {
+  background-color: #051723;
+}
+.feed-page main #tweets-area .tweet .tweet-content {
+  padding: 30px !important;
+  width: 100%;
+}
+.feed-page main #tweets-area .tweet .tweet-content a {
+  color: white;
+}
+.feed-page main #tweets-area .tweet .tweet-info {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.feed-page main #tweets-area .tweet .tweet-info button {
+  background: transparent;
+  color: rgb(136, 136, 136);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.feed-page main #tweets-area .tweet .tweet-info button:hover i {
+  background-color: #051723;
+}
+.feed-page main #tweets-area .tweet .tweet-info button:hover span {
+  color: #09578b;
+}
+.feed-page main #tweets-area .tweet .tweet-info button i {
+  padding: 10px;
+  border-radius: 20px;
+}
 @media (max-width: 1000px) {
   .feed-page .right-aside {
     display: none;
   }
+}
+
+.top {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+.top i {
+  color: white;
+}
+
+.banner-image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 30px;
+}
+
+.user-info {
+  padding: 20px;
+}
+.user-info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: -100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.user-info .btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 40px;
+}
+.user-info .btn-wrapper .btn {
+  background-color: transparent;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+}
+.user-info .btn-wrapper button {
+  width: 100px;
+  border-radius: 50px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.user-detail {
+  padding: 10px;
+  border-bottom: 1px solid rgb(50, 50, 50);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.user-detail h1 {
+  font-size: 20px;
+}
+.user-detail .username {
+  color: gray;
+}
+.user-detail div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-detail div p {
+  color: gray;
+}
+.user-detail div p span {
+  color: white;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

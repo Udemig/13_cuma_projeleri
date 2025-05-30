@@ -4,7 +4,7 @@ class API {
     this.options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "8f32504ce5mshdcbaaca26770543p1829d9jsnefacb353beac",
+        "x-rapidapi-key": "463cb6bdb3msh544272941ec8857p1bb2a9jsn24372257dfc0",
         "x-rapidapi-host": "twitter-api45.p.rapidapi.com",
       },
     };
@@ -31,6 +31,30 @@ class API {
   }
 
   // Kullanıcının attığı tweetleri alacak fonksiyon
+  async fetchData(query) {
+    const response = await fetch(
+      `${this.baseUrl}/search_communities_latest.php?query=${query}`,
+      this.options
+    );
+    const data = await response.json();
+
+    return data.timeline;
+  }
+
+  // Kullanıcının detay sayfası için verileri alacak fonksiyon
+  async getDetail(username) {
+    // Api'a istek at
+    const response = await fetch(
+      `${this.baseUrl}/usermedia.php?screenname=${username}`,
+      this.options
+    );
+
+    // Api'dan gelen veriyi js nesnesine çevir
+    const data = await response.json();
+
+    // Api'dan elde edilen veriyi geri dönder
+    return data;
+  }
 }
 
 export default API;
