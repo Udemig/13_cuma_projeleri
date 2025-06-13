@@ -21,3 +21,9 @@
     @content;
   }
 }
+
+@mixin sm {
+  @media (max-width: 630px) {
+    @content;
+  }
+}

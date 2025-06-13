@@ -1,3 +1,5 @@
+import { formatNumber, getMedia } from "./helpers.js";
+
 // Auth Elemanları
 const authEle = {
   loginForm: document.querySelector("#login-form"),
@@ -16,25 +18,26 @@ const mainEle = {
 // Kullanıcının atmış olduğu tweet'leri renderlayan fonksiyon
 const renderTimeline = (tweets, outlet) => {
   // tweets dizisini dön ve her eleman için bir html oluştur
-  console.log(tweets);
 
   let tweetsHTML = tweets
     .map(
       (tweet) => `        <div class="tweet">
  
           <div class="user">
-            <div class="user-info">
+            <a href='?user#${tweet.screen_name}' class="tweet-user-info">
               <img src="./images/default.png" alt="user-image" />
               <h4>${tweet.user_info.name} </h4>
-              <a href='?user#${tweet.screen_name}'>@${tweet.screen_name} </a>
+              <div>@${tweet.screen_name} </div>
               <p id='tweet-date'>${moment(tweet.created_at).fromNow()}</p>
-            </div>
+            </a>
             <i class="fa-solid fa-ellipsis"></i>
           </div>
-     
+ 
           <div class="tweet-content">
-            <a href='?status/${tweet.screen_name}'>
+            <a href='?status/${tweet.screen_name}#${tweet.tweet_id}'>
       ${tweet.text}
+
+      ${getMedia(tweet.media)}
             </a>
           </div>
 
@@ -66,6 +69,8 @@ const renderTimeline = (tweets, outlet) => {
 
 // Kullanıcı detay sayfasını renderlayacak fonksiyon
 const renderUserInfo = (user) => {
+  console.log(user);
+
   mainEle.topArea.innerHTML = `
   
   <div class='top'>
@@ -99,16 +104,16 @@ const renderUserInfo = (user) => {
 
   <div class='user-detail'>
   
-  <h1> Mehmet Can Seyhan</h1>
+  <h1>${user.name}</h1>
 
-  <p class='username'>@isvec_krali_</p>
+  <p class='username'>@${user.profile}</p>
 
 
-  <p class='description'>CEO@Udemig,Yazılım Mühendisi. Akrediteli,iş garantili Yazılım Akademisi Software Eng. Job guaranteed,Accredited software academy https://t.co/bnY0pkKVtv</p>
+  <p class='description'>${user.desc}</p>
 
   <div class='bottom'>
-  <p><span>${user.friends} </span> Takip Edilen</p>
-  <p><span>${user.sub_count} </span> Takipçi</p>
+  <p><span>${formatNumber(user.friends)} </span> Takip Edilen</p>
+  <p><span>${formatNumber(user.sub_count)} </span> Takipçi</p>
   </div>
 
   </div>
@@ -135,6 +140,8 @@ const renderUsersTweets = (tweets, user) => {
           <div class="tweet-content">
             <a href='?status/${tweet.author.screen_name}'>
       ${tweet.text}
+      
+      ${getMedia(tweet.media)}
             </a>
           </div>
 
@@ -163,7 +170,74 @@ const renderUsersTweets = (tweets, user) => {
 };
 
 // Tweet detay sayfasını renderlayacak fonksiyon
-const renderTweetDetail = () => {};
+const renderTweetDetail = (tweet) => {
+  mainEle.topArea.innerHTML = `
+  <div class='top'>
+  
+  <a href='/'>
+  <i class="fa-solid fa-arrow-left"></i>
+  </a>
+
+  <h2>Gönderi </h2>
+  
+  </div>
+
+
+
+  <div class='tweet-detail'>
+  <div>
+  <img src='${tweet.author.image}' class='tweet-user-image'/>
+  <h1>${tweet.author.name}</h1>
+  <h4>@${tweet.author.screen_name}</h4>
+</div>
+
+
+   <button>Abone Ol</button>
+ </div>
+
+
+  <p class='tweet-text'>${tweet.display_text}</p>
+
+  
+   <div class="tweet-info">
+            <button>
+              <i class="fa-regular fa-comment"></i> <span>${tweet.quotes}</span>
+            </button>
+            <button><i class="fa-solid fa-retweet"></i> <span>${tweet.retweets}</span></button>
+            <button><i class="fa-regular fa-heart"></i> <span>${tweet.likes}</span></button>
+            <button>
+              <i class="fa-regular fa-bookmark"></i> <span>${tweet.bookmarks}</span>
+            </button>
+          </div>
+
+  
+  </div>
+  
+  
+  
+  `;
+};
+
+// Loader render eden fonksiyon
+const renderLoader = (outlet) => {
+  outlet.innerHTML = `
+  <div class='loader-wrapper'>
+<div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+    <div class="bar7"></div>
+    <div class="bar8"></div>
+    <div class="bar9"></div>
+    <div class="bar10"></div>
+    <div class="bar11"></div>
+    <div class="bar12"></div>
+</div>
+</div>`;
+};
 
 export {
   authEle,
@@ -172,4 +246,5 @@ export {
   renderUserInfo,
   renderTweetDetail,
   renderUsersTweets,
+  renderLoader,
 };

@@ -55,6 +55,18 @@ class API {
     // Api'dan elde edilen veriyi geri dönder
     return data;
   }
+
+  // Tweet detay sayfası için verileri alacak fonksiyon
+  async getTweetDetail(tweetId) {
+    const res = await fetch(
+      `${this.baseUrl}/tweet.php?id=${tweetId}`,
+      this.options
+    );
+
+    const data = await res.json();
+
+    return data;
+  }
 }
 
 export default API;

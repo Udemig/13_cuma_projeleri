@@ -2,7 +2,9 @@ import API from "./api.js";
 import { getFromLocal } from "./helpers.js";
 import {
   mainEle,
+  renderLoader,
   renderTimeline,
+  renderTweetDetail,
   renderUserInfo,
   renderUsersTweets,
 } from "./ui.js";
@@ -26,26 +28,38 @@ const controlURL = async () => {
 
   // Eğer ana sayfadaysak
   if (!path) {
+    // Loader renderla
+    renderLoader(mainEle.tweetsArea);
+
     // Api'a istek at
     let tweets = await api.fetchData(user.profile);
+
     // Elde edilen tweets ile arayüzü renderla
     renderTimeline(tweets, mainEle.tweetsArea);
   }
 
   // Eğer kullanıcı detay sayfasındaysak
   if (path == "user") {
+    // Loader renderla
+    renderLoader(mainEle.tweetsArea);
+
+    // Api'a istek at
     const userData = await api.getDetail(user.profile);
 
-    console.log(userData);
-
+    // Kullanıcı verilerini renderla
     renderUserInfo(userData.user);
 
     renderUsersTweets(userData.timeline, userData.user);
   }
 
   // Eğer tweet detay sayfasındaysak
-  if (path.split("/")[0] == "status") {
-    console.log(`Tweet detay sayfası`);
+  if (path?.split("/")[0] == "status" && userName) {
+    // Loader renderla
+    renderLoader(mainEle.topArea);
+
+    const tweeetDetail = await api.getTweetDetail(userName);
+
+    renderTweetDetail(tweeetDetail);
   }
 };
 

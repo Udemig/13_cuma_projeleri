@@ -25,4 +25,40 @@ const removeFromLocal = (key) => {
   localStorage.removeItem(key);
 };
 
-export { setToLocal, getFromLocal, removeFromLocal };
+// Tweet içerisindeki media kısmını render edecek fonksiyon
+const getMedia = (media) => {
+  // Eğer verilen media bir resim ise
+  if (media.photo) {
+    return `<img src='${media.photo[0].media_url_https}' />`;
+  }
+
+  // Eğer verilen media bir video ise
+
+  if (media.video) {
+    // Gelen veri içerisinde type'ı mp4 olanı filtrele
+    const filtredVideo = media.video[0].variants.filter(
+      (item) => item.content_type === "video/mp4"
+    );
+
+    return `<video src='${filtredVideo[0].url}' controls></video>`;
+  }
+  // Eğer verilen media içeriği yoksa
+
+  return "";
+};
+
+// Sayıyı bin,onbin,milyon şeklinde formatlayan bir fonksiyon
+const formatNumber = (count) => {
+  if (count >= 1e9) {
+    return (count / 1e9).toFixed(1).replace(/\.0$/, "") + "B";
+  }
+  if (count >= 1e6) {
+    return (count / 1e6).toFixed(1).replace(/\.0$/, "") + "M";
+  }
+  if (count >= 1e3) {
+    return (count / 1e3).toFixed(1).replace(/\.0$/, "") + "k";
+  }
+  return count.toString();
+};
+
+export { setToLocal, getFromLocal, removeFromLocal, getMedia, formatNumber };

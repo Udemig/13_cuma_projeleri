@@ -13,7 +13,9 @@
   @include miniPhone {
     grid-template-columns: 70px 1fr !important;
   }
-
+  @include sm {
+    grid-template-columns: 70px 400px !important;
+  }
   // Left
   .left-aside {
     display: flex;
@@ -184,6 +186,7 @@
     #tweets-area {
       display: flex;
       flex-direction: column;
+
       .tweet {
         padding: 10px 0;
         border-bottom: 1px solid rgb(50, 50, 50);
@@ -194,10 +197,14 @@
           justify-content: space-between;
           padding: 10px 20px;
           cursor: pointer;
+
+          // User Info
           .tweet-user-info {
             display: flex;
             align-items: center;
             gap: 15px;
+            color: white;
+
             img {
               width: 40px;
               height: 40px;
@@ -212,6 +219,9 @@
             }
             #tweet-date {
               white-space: nowrap;
+              @include sm {
+                display: none;
+              }
             }
           }
           i {
@@ -229,8 +239,19 @@
         .tweet-content {
           padding: 30px !important;
           width: 100%;
+          @include sm {
+            width: 85% !important;
+          }
           a {
             color: white;
+            img,
+            video {
+              width: 100%;
+              max-height: 500px;
+              border-radius: 10px;
+              object-fit: cover;
+              margin: 10px;
+            }
           }
         }
 
